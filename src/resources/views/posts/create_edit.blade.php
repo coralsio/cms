@@ -17,8 +17,7 @@
     @parent
     <div class="row">
         <div class="col-md-12">
-            {!! CoralsForm::openForm($post, ['files' => true]) !!}
-            {!! Form::model($post, ['url' => url($resource_url.'/'.$post->hashed_id),'method'=>$post->exists?'PUT':'POST','files'=>true,'class'=>'ajax-form']) !!}
+            {!! CoralsForm::openForm($post, ['url' => url($resource_url.'/'.$post->hashed_id),'method'=>$post->exists?'PUT':'POST','files'=>true,'class'=>'ajax-form']) !!}
             @component('components.box')
                 <div class="row">
                     <div class="col-md-4">
