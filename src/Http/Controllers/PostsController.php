@@ -57,7 +57,7 @@ class PostsController extends BaseController
     public function store(PostRequest $request)
     {
         try {
-            $post = $this->postService->store($request, Post::class, ['author_id' => user()->id]);
+            $post = $this->postService->store($request, Post::class);
 
             flash(trans('Corals::messages.success.created', ['item' => $this->title_singular]))->success();
         } catch (\Exception $exception) {

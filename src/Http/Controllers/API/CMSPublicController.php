@@ -3,7 +3,9 @@
 namespace Corals\Modules\CMS\Http\Controllers\API;
 
 use Corals\Foundation\Http\Controllers\APIPublicController;
+use Corals\Modules\CMS\Models\Category;
 use Corals\Modules\CMS\Services\CMSService;
+use Corals\Modules\CMS\Transformers\API\ContentPresenter;
 use Illuminate\Http\Request;
 
 class CMSPublicController extends APIPublicController
@@ -27,11 +29,13 @@ class CMSPublicController extends APIPublicController
         try {
             $validTypes = ['page', 'post', 'faq', 'news'];
 
-            if (! in_array($type, $validTypes)) {
+            if (!in_array($type, $validTypes)) {
                 throw new \Exception('Invalid type!! type should be of the following: ' . join(', ', $validTypes));
             }
 
-            return $this->CMSService->contentListByType($request, $type);
+            $contentQuery = $this->CMSService->contentListByType($request, $type);
+
+            return $this->CMSService->paginateResult($contentQuery);
         } catch (\Exception $exception) {
             return apiExceptionResponse($exception);
         }
@@ -61,6 +65,44 @@ class CMSPublicController extends APIPublicController
     {
         try {
             return $this->CMSService->getPostsByTag($request, $slug);
+        } catch (\Exception $exception) {
+            return apiExceptionResponse($exception);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @param $type
+     * @return \Illuminate\Http\JsonResponse|mixed
+     */
+    public function getCategoriesList(Request $request, $type)
+    {
+        try {
+            return ['categories' => apiPluck(Category::query()->active()->where('belongs_to', $type)
+                ->pluck('name', 'slug'), 'value', 'label')];
+        } catch (\Exception $exception) {
+            return apiExceptionResponse($exception);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @param $type
+     * @return \Illuminate\Http\JsonResponse|mixed
+     */
+    public function getLatestContentListByType(Request $request, $type)
+    {
+        try {
+            $validTypes = ['page', 'post', 'faq', 'news'];
+
+            if (!in_array($type, $validTypes)) {
+                throw new \Exception('Invalid type!! type should be of the following: ' . join(', ', $validTypes));
+            }
+
+            $contentQuery = $this->CMSService->contentListByType($request, $type);
+            $contentQuery = $contentQuery->latest()->take(3);
+
+            return (new ContentPresenter())->present($contentQuery->get());
         } catch (\Exception $exception) {
             return apiExceptionResponse($exception);
         }

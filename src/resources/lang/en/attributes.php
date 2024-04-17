@@ -46,6 +46,7 @@ return [
             '2' => '2 Stars',
             '1' => '1 Star',
         ],
+        'author' => 'Author',
     ],
 
     'block' => [

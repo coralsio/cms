@@ -100,7 +100,7 @@ class CMSService
 
         $contentQuery = $this->applyFilters($request, $contentQuery);
 
-        return $this->paginateResult($contentQuery);
+        return $contentQuery;
     }
 
     /**
@@ -108,7 +108,7 @@ class CMSService
      * @return mixed
      * @throws \Exception
      */
-    protected function paginateResult($queryBuilder)
+    public function paginateResult($queryBuilder)
     {
         $presenter = new ContentPresenter();
 
