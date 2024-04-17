@@ -35,6 +35,7 @@ class PostRequest extends BaseRequest
                 'content' => 'required',
                 'categories' => 'required',
                 'featured_image' => 'mimes:jpg,jpeg,png|max:' . maxUploadFileSize(),
+                'author_id'=>'required|exists:users,id'
             ]);
         }
 

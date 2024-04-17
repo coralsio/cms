@@ -63,6 +63,18 @@
                                 ['help_text'=>'cms::attributes.content.internal_help']) !!}
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                {!! CoralsForm::select("author_id",'cms::attributes.content.author', [],  true, null,
+                                     ['class'=>'select2-ajax',
+                                     'data'=>[
+                                    'model'=>\Corals\User\Models\User::class,
+                                    'columns'=> json_encode(['name','last_name', 'email']),
+                                    'selected'=>json_encode([$post->author_id ?? user()->id]),
+                                    'where'=>json_encode([]),
+                                    ]],'select2') !!}
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         @if($post->featured_image)

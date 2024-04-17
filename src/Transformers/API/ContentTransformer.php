@@ -17,6 +17,7 @@ class ContentTransformer extends APIBaseTransformer
     {
         $featured_image = CMS::getContentFeaturedImage($content);
         $content = $content->toContentType();
+        $auther = $content->author;
 
         $transformedArray = [
             'id' => $content->id,
@@ -25,11 +26,14 @@ class ContentTransformer extends APIBaseTransformer
             'slug' => ($content->internal ? 'cms/' : '') . $content->slug,
             'published' => $content->published,
             'published_at' => $content->published ? format_date($content->published_at) : '-',
-            'categories' => $content->categories ? $content->categories->pluck('name')->toArray() : [],
+            'categories' => $content->categories ? apiPluck($content->categories->pluck('name', 'slug'),
+                'value', 'label') : [],
             'tags' => $content->tags ? $content->tags->pluck('name')->toArray() : [],
             'private' => $content->private,
             'internal' => $content->internal,
             'featured_image' => $featured_image,
+            'author' => ['full_name' => $auther->name . ' ' . $auther->last_name,
+                'picture_thumb' => $auther->picture_thumb],
             'created_at' => format_date($content->created_at),
             'updated_at' => format_date($content->updated_at),
         ];
