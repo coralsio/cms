@@ -20,4 +20,5 @@ Route::group([], function () {
     Route::get('{slug}', 'CMSPublicController@show')->name('api.cms.get_by_slug');
     Route::get('categories/{type}', 'CMSPublicController@getCategoriesList')->name('api.cms.categories-by-type');
     Route::get('latest-content-by-type/{type}', 'CMSPublicController@getLatestContentListByType')->name('api.cms.latest-content-by-type');
+    Route::get('faqs-by-category/{slug}', 'CMSPublicController@getFaqsByCategory')->name('api.cms.faqs-by-category');
 });

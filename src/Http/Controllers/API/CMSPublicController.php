@@ -107,4 +107,13 @@ class CMSPublicController extends APIPublicController
             return apiExceptionResponse($exception);
         }
     }
+
+    public function getFaqsByCategory(Request $request, $slug)
+    {
+        try {
+            return $this->CMSService->getFaqsByCategory($request, $slug);
+        } catch (\Exception $exception) {
+            return apiExceptionResponse($exception);
+        }
+    }
 }
