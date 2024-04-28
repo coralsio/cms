@@ -45,6 +45,26 @@ class CMSService
 
     /**
      * @param $request
+     * @param $categorySlug
+     * @return mixed
+     * @throws \Exception
+     */
+    public function getFaqsByCategory($request, $categorySlug)
+    {
+        $category = Category::active()->where('slug', $categorySlug)->first();
+
+        if (! $category) {
+            abort(404, 'Not Found!!');
+        }
+
+        $posts = $category->faqs();
+
+        $posts = $this->applyFilters($request, $posts);
+
+        return $this->paginateResult($posts);
+    }
+    /**
+     * @param $request
      * @param $tagSlug
      * @return mixed
      * @throws \Exception
