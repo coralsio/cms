@@ -122,7 +122,7 @@ class CMSPublicController extends APIPublicController
         try {
             $contentQuery = $this->CMSService->getPagesBySlugs($request);
 
-            return $this->CMSService->paginateResult($contentQuery);
+            return (new ContentPresenter())->present($contentQuery->get());
         } catch (\Exception $exception) {
             return apiExceptionResponse($exception);
         }
