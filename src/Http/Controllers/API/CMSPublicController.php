@@ -116,4 +116,15 @@ class CMSPublicController extends APIPublicController
             return apiExceptionResponse($exception);
         }
     }
+
+    public function getPagesBySlugs(Request $request)
+    {
+        try {
+            $contentQuery = $this->CMSService->getPagesBySlugs($request);
+
+            return (new ContentPresenter())->present($contentQuery->get());
+        } catch (\Exception $exception) {
+            return apiExceptionResponse($exception);
+        }
+    }
 }

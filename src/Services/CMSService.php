@@ -157,4 +157,22 @@ class CMSService
 
         return $item->presenter();
     }
+
+    /**
+     * @param $request
+     * @return mixed
+     * @throws \Exception
+     */
+    public function getPagesBySlugs($request)
+    {
+        $contentQuery = $this->getContentQuery();
+
+        $slugs = explode(',',$request->get('slugs',[]));
+
+        $contentQuery->where('type', 'page')->whereIn('slug',$slugs);
+
+        $contentQuery = $this->applyFilters($request, $contentQuery);
+
+        return $contentQuery;
+    }
 }

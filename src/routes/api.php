@@ -17,6 +17,7 @@ Route::group([], function () {
     Route::get('content-by-type/{type}', 'CMSPublicController@getContentListByType')->name('api.cms.content-by-type');
     Route::get('posts-by-category/{slug}', 'CMSPublicController@getPostsByCategory')->name('api.cms.posts-by-category');
     Route::get('posts-by-tag/{slug}', 'CMSPublicController@getPostsByTag')->name('api.cms.posts-by-tag');
+    Route::get('pages-by-slugs', 'CMSPublicController@getPagesBySlugs')->name('api.cms.pages-by-slugs');
     Route::get('{slug}', 'CMSPublicController@show')->name('api.cms.get_by_slug');
     Route::get('categories/{type}', 'CMSPublicController@getCategoriesList')->name('api.cms.categories-by-type');
     Route::get('latest-content-by-type/{type}', 'CMSPublicController@getLatestContentListByType')->name('api.cms.latest-content-by-type');
