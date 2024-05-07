@@ -27,7 +27,7 @@
                         {!! CoralsForm::text('slug','cms::attributes.content.slug',true) !!}
                     </div>
                     <div class="col-md-4">
-                        {!! CoralsForm::select('categories[]','cms::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'post'),true,null,['multiple'=>true], 'select2') !!}
+                        {!! CoralsForm::select('categories[]','cms::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'post'),true,$post->categories->pluck('id')->toArray(),['multiple'=>true], 'select2') !!}
                     </div>
                 </div>
                 <div class="row">

@@ -31,7 +31,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        {!! CoralsForm::select('categories[]','cms::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'faq'),true,null,['multiple'=>true], 'select2') !!}
+                        {!! CoralsForm::select('categories[]','cms::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'faq'),true,$faq->categories->pluck('id')->toArray(),['multiple'=>true], 'select2') !!}
                     </div>
                     <div class="col-md-6">
                         {!! CoralsForm::select('tags[]','cms::attributes.content.tags', \CMS::getTagsList(),false,null,['class'=>'tags','multiple'=>true], 'select2') !!}
