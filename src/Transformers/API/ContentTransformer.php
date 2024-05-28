@@ -25,6 +25,8 @@ class ContentTransformer extends APIBaseTransformer
             'content' => $content->content,
             'slug' => ($content->internal ? 'cms/' : '') . $content->slug,
             'published' => $content->published,
+            'meta_keywords' => $content->meta_keywords,
+            'meta_description' => $content->meta_description,
             'published_at' => $content->published ? format_date($content->published_at) : '-',
             'published_at_show' => $content->published ? $content->published_at->format('m/d/Y') : '-',
             'categories' => $content->categories ? apiPluck($content->categories->pluck('name', 'slug'),
