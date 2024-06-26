@@ -42,6 +42,7 @@ trait CMSControllerFunctions
         $item = $this->contentQuery->where('slug', \Str::slug($slug))->first();
 
         if (! $item) {
+            return response()->redirectTo('dashboard');
             abort(404);
         }
 
