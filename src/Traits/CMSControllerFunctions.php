@@ -124,6 +124,10 @@ trait CMSControllerFunctions
             }
         }
 
+        if ($request->is('*/content')) {
+            return $item->rendered;
+        }
+
         if (! is_null($item->template)) {
             $view = 'templates.' . $item->template;
         } else {
@@ -506,13 +510,16 @@ trait CMSControllerFunctions
      */
     public function contactEmail(Request $request)
     {
-        $this->validate($request, [
+      $validatedData =  $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'subject' => 'required',
+            'subject' => 'sometimes|required',
+            'phone' => 'sometimes|required',
             'message' => 'required',
             'g-recaptcha-response' => 'required|captcha',
         ]);
+
+        \Actions::do_action('pre_send_contact_email', $validatedData);
 
         \Mail::send(
             'emails.contact',
