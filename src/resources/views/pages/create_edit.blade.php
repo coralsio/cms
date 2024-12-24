@@ -69,7 +69,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                {!! CoralsForm::select('template','cms::attributes.content.template', \CMS::getFrontendThemeTemplates()) !!}
+                                {!! CoralsForm::select2('template','cms::attributes.content.template', \CMS::getFrontendThemeTemplates()) !!}
                             </div>
                         </div>
                     </div>

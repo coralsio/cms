@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         {!! CoralsForm::text('properties[job_title]','cms::attributes.content.job_title',true) !!}
-                        {!! CoralsForm::select('properties[rating]','cms::attributes.content.rating',trans('cms::attributes.content.rating_option'),true) !!}
+                        {!! CoralsForm::select2('properties[rating]','cms::attributes.content.rating',trans('cms::attributes.content.rating_option'),true) !!}
                     </div>
                 </div>
                 <div class="row">

@@ -23,7 +23,7 @@
 
                 {!! CoralsForm::text('name','cms::attributes.category.name',true) !!}
                 {!! CoralsForm::text('slug','cms::attributes.category.slug',true) !!}
-                {!! CoralsForm::select('belongs_to','cms::attributes.category.belongs_to', \CMS::getCategoriesBelongsTo(), true) !!}
+                {!! CoralsForm::select2('belongs_to','cms::attributes.category.belongs_to', \CMS::getCategoriesBelongsTo(), true) !!}
 
                 {!! CoralsForm::radio('status','Corals::attributes.status',true, trans('Corals::attributes.status_options')) !!}
 
