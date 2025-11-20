@@ -68,7 +68,7 @@ class PagesTest extends TestCase
         if ($this->page) {
             $response = $this->get('cms/pages/' . $this->page->hashed_id . '/edit');
 
-            $response->assertViewIs('cms::pages.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::pages.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }
@@ -130,7 +130,7 @@ class PagesTest extends TestCase
         if ($this->page) {
             $response = $this->get('cms/pages/' . $this->page->hashed_id . '/design');
 
-            $response->assertViewIs('cms::designer.designer')->assertStatus(200);
+            $response->assertViewIs('CMS::designer.designer')->assertStatus(200);
         }
         $this->assertTrue(true);
     }

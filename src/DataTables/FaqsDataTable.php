@@ -44,10 +44,10 @@ class FaqsDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'title' => ['title' => trans('cms::attributes.content.title')],
-            'published' => ['title' => trans('cms::attributes.content.published')],
-            'published_at' => ['title' => trans('cms::attributes.content.published_at')],
-            'categories' => ['name' => 'categories.name', 'title' => trans('cms::attributes.content.categories'), 'orderable' => false],
+            'title' => ['title' => trans('CMS::attributes.content.title')],
+            'published' => ['title' => trans('CMS::attributes.content.published')],
+            'published_at' => ['title' => trans('CMS::attributes.content.published_at')],
+            'categories' => ['name' => 'categories.name', 'title' => trans('CMS::attributes.content.categories'), 'orderable' => false],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
         ];
@@ -56,10 +56,10 @@ class FaqsDataTable extends BaseDataTable
     public function getFilters()
     {
         return [
-            'title' => ['title' => trans('cms::attributes.content.title'), 'class' => 'col-md-4', 'type' => 'text', 'condition' => 'like', 'active' => true],
-            'categories.id' => ['title' => trans('cms::attributes.content.title'), 'class' => 'col-md-2', 'type' => 'select2', 'options' => CMS::getCategoriesList(false, null, null, 'faq'), 'active' => true],
+            'title' => ['title' => trans('CMS::attributes.content.title'), 'class' => 'col-md-4', 'type' => 'text', 'condition' => 'like', 'active' => true],
+            'categories.id' => ['title' => trans('CMS::attributes.content.title'), 'class' => 'col-md-2', 'type' => 'select2', 'options' => CMS::getCategoriesList(false, null, null, 'faq'), 'active' => true],
             'created_at' => ['title' => trans('Corals::attributes.created_at'), 'class' => 'col-md-2', 'type' => 'date', 'active' => true],
-            'published' => ['title' => trans('cms::labels.post.show_published_only'), 'class' => 'col-md-2', 'type' => 'boolean', 'active' => true],
+            'published' => ['title' => trans('CMS::labels.post.show_published_only'), 'class' => 'col-md-2', 'type' => 'boolean', 'active' => true],
         ];
     }
 
@@ -67,8 +67,8 @@ class FaqsDataTable extends BaseDataTable
     {
         return [
             'delete' => ['title' => trans('Corals::labels.delete'), 'permission' => 'CMS::faq.delete', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('cms::attributes.content.published'), 'permission' => 'CMS::faq.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .trans('cms::attributes.content.draft'), 'permission' => 'CMS::faq.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('CMS::attributes.content.published'), 'permission' => 'CMS::faq.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .trans('CMS::attributes.content.draft'), 'permission' => 'CMS::faq.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
         ];
     }
 

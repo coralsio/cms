@@ -43,10 +43,10 @@ class CategoriesDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'name' => ['title' => trans('cms::attributes.category.name')],
-            'slug' => ['title' => trans('cms::attributes.category.slug')],
-            'posts_count' => ['title' => trans('cms::attributes.category.posts_count'), 'searchable' => false],
-            'belongs_to' => ['title' => trans('cms::attributes.category.belongs_to'), 'searchable' => false],
+            'name' => ['title' => trans('CMS::attributes.category.name')],
+            'slug' => ['title' => trans('CMS::attributes.category.slug')],
+            'posts_count' => ['title' => trans('CMS::attributes.category.posts_count'), 'searchable' => false],
+            'belongs_to' => ['title' => trans('CMS::attributes.category.belongs_to'), 'searchable' => false],
             'status' => ['title' => trans('Corals::attributes.status')],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
@@ -57,8 +57,8 @@ class CategoriesDataTable extends BaseDataTable
     {
         return [
             'delete' => ['title' => trans('Corals::labels.delete'), 'permission' => 'CMS::category.delete', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'active' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('cms::attributes.widget.status_options.active'), 'permission' => 'CMS::category.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'inActive' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .  trans('cms::attributes.widget.status_options.inactive'), 'permission' => 'CMS::category.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'active' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('CMS::attributes.widget.status_options.active'), 'permission' => 'CMS::category.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'inActive' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .  trans('CMS::attributes.widget.status_options.inactive'), 'permission' => 'CMS::category.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
         ];
     }
 

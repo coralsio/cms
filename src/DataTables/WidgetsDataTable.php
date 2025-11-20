@@ -48,10 +48,10 @@ class WidgetsDataTable extends BaseDataTable
     {
         return [
             'widget_order' => ['title' => trans('Subscriptions::attributes.feature.display_order'), 'visible' => false],
-            'id' => ['title' => trans('cms::attributes.widget.id'), 'sorting' => false],
-            'title' => ['title' => trans('cms::attributes.widget.title'), 'sorting' => false],
+            'id' => ['title' => trans('CMS::attributes.widget.id'), 'sorting' => false],
+            'title' => ['title' => trans('CMS::attributes.widget.title'), 'sorting' => false],
             'status' => ['title' => trans('Corals::attributes.status'), 'sorting' => false],
-            'widget_width' => ['title' => trans('cms::attributes.widget.widget_width'), 'sorting' => false],
+            'widget_width' => ['title' => trans('CMS::attributes.widget.widget_width'), 'sorting' => false],
             'created_at' => ['title' => trans('Corals::attributes.created_at'), 'sorting' => false],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at'), 'sorting' => false],
         ];

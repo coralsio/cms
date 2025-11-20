@@ -30,14 +30,14 @@ class CategoriesViewTest extends TestCase
     {
         $response = $this->get('cms/categories');
 
-        $response->assertStatus(200)->assertViewIs('cms::categories.index');
+        $response->assertStatus(200)->assertViewIs('CMS::categories.index');
     }
 
     public function test_category_create()
     {
         $response = $this->get('cms/categories/create');
 
-        $response->assertViewIs('cms::categories.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::categories.create_edit')->assertStatus(200);
     }
 
     public function test_category_bulk_action()

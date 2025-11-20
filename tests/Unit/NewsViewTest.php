@@ -30,14 +30,14 @@ class NewsViewTest extends TestCase
     {
         $response = $this->get('cms/news');
 
-        $response->assertStatus(200)->assertViewIs('cms::news.index');
+        $response->assertStatus(200)->assertViewIs('CMS::news.index');
     }
 
     public function test_news_create()
     {
         $response = $this->get('cms/news/create');
 
-        $response->assertViewIs('cms::news.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::news.create_edit')->assertStatus(200);
     }
 
     public function test_news_bulk_action()

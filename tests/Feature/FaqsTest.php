@@ -74,7 +74,7 @@ class FaqsTest extends TestCase
         if ($this->faq) {
             $response = $this->get('cms/faqs/' . $this->faq->hashed_id . '/edit');
 
-            $response->assertViewIs('cms::faqs.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::faqs.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }

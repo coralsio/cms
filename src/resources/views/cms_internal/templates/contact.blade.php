@@ -3,7 +3,7 @@
 @section('title', $item->title)
 
 @section('content')
-    @include('cms::cms_internal.partials.page_header',['content' => $item->rendered])
+    @include('CMS::cms_internal.partials.page_header',['content' => $item->rendered])
 
     <div class='row'>
         <div class="col-md-12">
@@ -16,7 +16,7 @@
                     <div class="col-md-4 col-md-offset-2">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" required="required"
-                                   placeholder="@lang('cms::labels.cms_internal.contact_form.name')">
+                                   placeholder="@lang('CMS::labels.cms_internal.contact_form.name')">
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" required="required"

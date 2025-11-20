@@ -51,7 +51,7 @@ class BlocksTest extends TestCase
         if ($this->block) {
             $response = $this->get('cms/blocks/' . $this->block->hashed_id . '/widgets');
 
-            $response->assertViewIs('cms::widgets.index')->assertStatus(200);
+            $response->assertViewIs('CMS::widgets.index')->assertStatus(200);
         }
         $this->assertTrue(true);
     }
@@ -103,7 +103,7 @@ class BlocksTest extends TestCase
 
         if ($this->widget) {
             $response = $this->get('cms/blocks/' . $this->block->hashed_id . '/widgets/' . $this->widget->hashed_id . '/edit');
-            $response->assertViewIs('cms::widgets.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::widgets.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }

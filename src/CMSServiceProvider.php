@@ -45,10 +45,10 @@ class CMSServiceProvider extends BasePackageServiceProvider
     public function bootPackage()
     {
         // Load view
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'cms');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'CMS');
 
         // Load translation
-        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'cms');
+        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'CMS');
 
         //Register Widgets
         $this->registerWidgets();
@@ -107,7 +107,7 @@ class CMSServiceProvider extends BasePackageServiceProvider
 
     public function registerFeedLinksComposer()
     {
-        View::composer('cms::feed.links', function ($view) {
+        View::composer('CMS::feed.links', function ($view) {
             $view->with('feeds', $this->feeds());
         });
     }
@@ -136,7 +136,7 @@ class CMSServiceProvider extends BasePackageServiceProvider
     public function registerShortcode()
     {
         \Shortcode::add('block', function ($key) {
-            $view = 'cms::blocks.block';
+            $view = 'CMS::blocks.block';
 
             if ($key == '$block') {
                 //Assume Block Object passed

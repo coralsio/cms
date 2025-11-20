@@ -43,9 +43,9 @@ class BlocksDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'name' => ['title' => trans('cms::attributes.block.name')],
-            'key' => ['title' => trans('cms::attributes.block.key')],
-            'short_code' => ['title' => trans('cms::attributes.block.short_code'), 'searchable' => false, 'orderable' => false],
+            'name' => ['title' => trans('CMS::attributes.block.name')],
+            'key' => ['title' => trans('CMS::attributes.block.key')],
+            'short_code' => ['title' => trans('CMS::attributes.block.short_code'), 'searchable' => false, 'orderable' => false],
             'status' => ['title' => trans('Corals::attributes.status')],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],

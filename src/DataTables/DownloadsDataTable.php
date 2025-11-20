@@ -43,10 +43,10 @@ class DownloadsDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'title' => ['title' => trans('cms::attributes.content.title')],
-            'files' => ['title' => trans('cms::attributes.download.files')],
-            'published' => ['title' => trans('cms::attributes.content.published')],
-            'published_at' => ['title' => trans('cms::attributes.content.published_at')],
+            'title' => ['title' => trans('CMS::attributes.content.title')],
+            'files' => ['title' => trans('CMS::attributes.download.files')],
+            'published' => ['title' => trans('CMS::attributes.content.published')],
+            'published_at' => ['title' => trans('CMS::attributes.content.published_at')],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
         ];

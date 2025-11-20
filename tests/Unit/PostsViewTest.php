@@ -30,14 +30,14 @@ class PostsViewTest extends TestCase
     {
         $response = $this->get('cms/posts');
 
-        $response->assertStatus(200)->assertViewIs('cms::posts.index');
+        $response->assertStatus(200)->assertViewIs('CMS::posts.index');
     }
 
     public function test_posts_create()
     {
         $response = $this->get('cms/posts/create');
 
-        $response->assertViewIs('cms::posts.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::posts.create_edit')->assertStatus(200);
     }
 
     public function test_posts_bulk_action()

@@ -30,13 +30,13 @@ class TestimonialsViewTest extends TestCase
     {
         $response = $this->get('cms/testimonials');
 
-        $response->assertStatus(200)->assertViewIs('cms::testimonials.index');
+        $response->assertStatus(200)->assertViewIs('CMS::testimonials.index');
     }
 
     public function test_testimonials_create()
     {
         $response = $this->get('cms/testimonials/create');
 
-        $response->assertViewIs('cms::testimonials.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::testimonials.create_edit')->assertStatus(200);
     }
 }

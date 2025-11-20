@@ -49,12 +49,12 @@ class NewsDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'title' => ['title' => trans('cms::attributes.content.title')],
-            'slug' => ['title' => trans('cms::attributes.content.slug')],
-            'published' => ['title' => trans('cms::attributes.content.published')],
-            'published_at' => ['title' => trans('cms::attributes.content.published_at')],
-            'private' => ['title' => trans('cms::attributes.content.private')],
-            'internal' => ['title' => trans('cms::attributes.content.internal')],
+            'title' => ['title' => trans('CMS::attributes.content.title')],
+            'slug' => ['title' => trans('CMS::attributes.content.slug')],
+            'published' => ['title' => trans('CMS::attributes.content.published')],
+            'published_at' => ['title' => trans('CMS::attributes.content.published_at')],
+            'private' => ['title' => trans('CMS::attributes.content.private')],
+            'internal' => ['title' => trans('CMS::attributes.content.internal')],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
         ];
@@ -64,8 +64,8 @@ class NewsDataTable extends BaseDataTable
     {
         return [
             'delete' => ['title' => trans('Corals::labels.delete'), 'permission' => 'CMS::news.delete', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('cms::attributes.content.published'), 'permission' => 'CMS::news.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .trans('cms::attributes.content.draft'), 'permission' => 'CMS::news.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('CMS::attributes.content.published'), 'permission' => 'CMS::news.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .trans('CMS::attributes.content.draft'), 'permission' => 'CMS::news.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
         ];
     }
 

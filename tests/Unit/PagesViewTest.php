@@ -30,14 +30,14 @@ class PagesViewTest extends TestCase
     {
         $response = $this->get('cms/pages');
 
-        $response->assertStatus(200)->assertViewIs('cms::pages.index');
+        $response->assertStatus(200)->assertViewIs('CMS::pages.index');
     }
 
     public function test_pages_create()
     {
         $response = $this->get('cms/pages/create');
 
-        $response->assertViewIs('cms::pages.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::pages.create_edit')->assertStatus(200);
     }
 
     public function test_pages_bulk_action()

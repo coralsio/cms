@@ -30,6 +30,6 @@ class BlocksViewTest extends TestCase
     {
         $response = $this->get('cms/blocks');
 
-        $response->assertStatus(200)->assertViewIs('cms::blocks.index');
+        $response->assertStatus(200)->assertViewIs('CMS::blocks.index');
     }
 }

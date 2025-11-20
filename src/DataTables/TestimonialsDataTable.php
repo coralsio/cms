@@ -43,12 +43,12 @@ class TestimonialsDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'image' => ['width' => '35px', 'title' => trans('cms::attributes.content.image'), 'orderable' => false, 'searchable' => false],
-            'title' => ['title' => trans('cms::attributes.content.title')],
-            'job_title' => ['title' => trans('cms::attributes.content.job_title')],
-            'rating' => ['title' => trans('cms::attributes.content.rating')],
-            'published' => ['title' => trans('cms::attributes.content.published')],
-            'published_at' => ['title' => trans('cms::attributes.content.published_at')],
+            'image' => ['width' => '35px', 'title' => trans('CMS::attributes.content.image'), 'orderable' => false, 'searchable' => false],
+            'title' => ['title' => trans('CMS::attributes.content.title')],
+            'job_title' => ['title' => trans('CMS::attributes.content.job_title')],
+            'rating' => ['title' => trans('CMS::attributes.content.rating')],
+            'published' => ['title' => trans('CMS::attributes.content.published')],
+            'published_at' => ['title' => trans('CMS::attributes.content.published_at')],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
         ];

@@ -43,12 +43,12 @@ class PagesDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'title' => ['title' => trans('cms::attributes.content.title')],
-            'slug' => ['title' => trans('cms::attributes.content.slug')],
-            'published' => ['title' => trans('cms::attributes.content.published')],
-            'published_at' => ['title' => trans('cms::attributes.content.published_at')],
-            'private' => ['title' => trans('cms::attributes.content.private')],
-            'internal' => ['title' => trans('cms::attributes.content.internal')],
+            'title' => ['title' => trans('CMS::attributes.content.title')],
+            'slug' => ['title' => trans('CMS::attributes.content.slug')],
+            'published' => ['title' => trans('CMS::attributes.content.published')],
+            'published_at' => ['title' => trans('CMS::attributes.content.published_at')],
+            'private' => ['title' => trans('CMS::attributes.content.private')],
+            'internal' => ['title' => trans('CMS::attributes.content.internal')],
             'updated_at' => ['title' => trans('Corals::attributes.updated_at')],
         ];
     }
@@ -56,10 +56,10 @@ class PagesDataTable extends BaseDataTable
     public function getFilters()
     {
         return [
-            'title' => ['title' => trans('cms::attributes.content.title'), 'class' => 'col-md-3', 'type' => 'text', 'condition' => 'like', 'active' => true],
-            'slug' => ['title' => trans('cms::attributes.content.slug'), 'class' => 'col-md-2', 'type' => 'text', 'condition' => 'like', 'active' => true],
+            'title' => ['title' => trans('CMS::attributes.content.title'), 'class' => 'col-md-3', 'type' => 'text', 'condition' => 'like', 'active' => true],
+            'slug' => ['title' => trans('CMS::attributes.content.slug'), 'class' => 'col-md-2', 'type' => 'text', 'condition' => 'like', 'active' => true],
             'created_at' => ['title' => trans('Corals::attributes.created_at'), 'class' => 'col-md-2', 'type' => 'date', 'active' => true],
-            'published' => ['title' => trans('cms::attributes.content.published'), 'class' => 'col-md-2', 'type' => 'boolean', 'active' => true],
+            'published' => ['title' => trans('CMS::attributes.content.published'), 'class' => 'col-md-2', 'type' => 'boolean', 'active' => true],
         ];
     }
 
@@ -67,8 +67,8 @@ class PagesDataTable extends BaseDataTable
     {
         return [
             'delete' => ['title' => trans('Corals::labels.delete'), 'permission' => 'CMS::page.delete', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' . trans('cms::attributes.content.published'), 'permission' => 'CMS::page.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' . trans('cms::attributes.content.draft'), 'permission' => 'CMS::page.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' . trans('CMS::attributes.content.published'), 'permission' => 'CMS::page.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' . trans('CMS::attributes.content.draft'), 'permission' => 'CMS::page.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
 
         ];
     }

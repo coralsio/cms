@@ -44,24 +44,24 @@ class PostsDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'title' => ['title' => trans('cms::attributes.content.title')],
-            'slug' => ['title' => trans('cms::attributes.content.slug')],
-            'published' => ['title' => trans('cms::attributes.content.published')],
-            'published_at' => ['title' => trans('cms::attributes.content.published_at')],
-            'categories' => ['name' => 'categories.name', 'title' => trans('cms::attributes.content.categories'), 'orderable' => false],
-            'private' => ['title' => trans('cms::attributes.content.private')],
-            'internal' => ['title' => trans('cms::attributes.content.internal')],
+            'title' => ['title' => trans('CMS::attributes.content.title')],
+            'slug' => ['title' => trans('CMS::attributes.content.slug')],
+            'published' => ['title' => trans('CMS::attributes.content.published')],
+            'published_at' => ['title' => trans('CMS::attributes.content.published_at')],
+            'categories' => ['name' => 'categories.name', 'title' => trans('CMS::attributes.content.categories'), 'orderable' => false],
+            'private' => ['title' => trans('CMS::attributes.content.private')],
+            'internal' => ['title' => trans('CMS::attributes.content.internal')],
         ];
     }
 
     public function getFilters()
     {
         return [
-            'title' => ['title' => trans('cms::attributes.content.title'), 'class' => 'col-md-4', 'type' => 'text', 'condition' => 'like', 'active' => true],
-            'slug' => ['title' => trans('cms::attributes.content.slug'), 'class' => 'col-md-3', 'type' => 'text', 'condition' => 'like', 'active' => true],
-            'categories.id' => ['title' => trans('cms::attributes.content.title'), 'class' => 'col-md-2', 'type' => 'select2', 'options' => CMS::getCategoriesList(false, null, null, 'post'), 'active' => true],
+            'title' => ['title' => trans('CMS::attributes.content.title'), 'class' => 'col-md-4', 'type' => 'text', 'condition' => 'like', 'active' => true],
+            'slug' => ['title' => trans('CMS::attributes.content.slug'), 'class' => 'col-md-3', 'type' => 'text', 'condition' => 'like', 'active' => true],
+            'categories.id' => ['title' => trans('CMS::attributes.content.title'), 'class' => 'col-md-2', 'type' => 'select2', 'options' => CMS::getCategoriesList(false, null, null, 'post'), 'active' => true],
             'created_at' => ['title' => trans('Corals::attributes.created_at'), 'class' => 'col-md-2', 'type' => 'date', 'active' => true],
-            'published' => ['title' => trans('cms::labels.post.show_published_only'), 'class' => 'col-md-2', 'type' => 'boolean', 'active' => true],
+            'published' => ['title' => trans('CMS::labels.post.show_published_only'), 'class' => 'col-md-2', 'type' => 'boolean', 'active' => true],
         ];
     }
 

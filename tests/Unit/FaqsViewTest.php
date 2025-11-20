@@ -30,14 +30,14 @@ class FaqsViewTest extends TestCase
     {
         $response = $this->get('cms/faqs');
 
-        $response->assertStatus(200)->assertViewIs('cms::faqs.index');
+        $response->assertStatus(200)->assertViewIs('CMS::faqs.index');
     }
 
     public function test_faqs_create()
     {
         $response = $this->get('cms/faqs/create');
 
-        $response->assertViewIs('cms::faqs.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::faqs.create_edit')->assertStatus(200);
     }
 
     public function test_faqs_bulk_action()

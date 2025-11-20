@@ -30,13 +30,13 @@ class DownloadsViewTest extends TestCase
     {
         $response = $this->get('cms/downloads');
 
-        $response->assertStatus(200)->assertViewIs('cms::download.index');
+        $response->assertStatus(200)->assertViewIs('CMS::download.index');
     }
 
     public function test_downloads_create()
     {
         $response = $this->get('cms/downloads/create');
 
-        $response->assertViewIs('cms::download.create_edit')->assertStatus(200);
+        $response->assertViewIs('CMS::download.create_edit')->assertStatus(200);
     }
 }

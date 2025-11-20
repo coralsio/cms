@@ -64,7 +64,7 @@ class TestimonialsTest extends TestCase
         if ($this->testimonial) {
             $response = $this->get('cms/testimonials/' . $this->testimonial->hashed_id . '/edit');
 
-            $response->assertViewIs('cms::testimonials.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::testimonials.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }

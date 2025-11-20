@@ -31,9 +31,9 @@ class CategoriesTest extends TestCase
         $categories = ['category1', 'category2', 'category3', 'category4'];
         $category = array_rand($categories);
         $this->belongs_to = [
-            'page' => trans('cms::attributes.category.page'),
-            'post' => trans('cms::attributes.category.post'),
-            'faq' => trans('cms::attributes.category.faq'),
+            'page' => trans('CMS::attributes.category.page'),
+            'post' => trans('CMS::attributes.category.post'),
+            'faq' => trans('CMS::attributes.category.faq'),
         ];
 
         $this->categoryRequest = [
@@ -69,7 +69,7 @@ class CategoriesTest extends TestCase
         if ($this->category) {
             $response = $this->get('cms/categories/' . $this->category->hashed_id . '/edit');
 
-            $response->assertViewIs('cms::categories.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::categories.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }

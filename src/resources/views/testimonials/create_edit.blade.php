@@ -21,18 +21,18 @@
             @component('components.box')
                 <div class="row">
                     <div class="col-md-8">
-                        {!! CoralsForm::text('title','cms::attributes.testimonial.author',true) !!}
+                        {!! CoralsForm::text('title','CMS::attributes.testimonial.author',true) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::textarea('content','cms::attributes.testimonial.review',true, null, []) !!}
+                        {!! CoralsForm::textarea('content','CMS::attributes.testimonial.review',true, null, []) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::text('properties[job_title]','cms::attributes.content.job_title',true) !!}
-                        {!! CoralsForm::select2('properties[rating]','cms::attributes.content.rating',trans('cms::attributes.content.rating_option'),true) !!}
+                        {!! CoralsForm::text('properties[job_title]','CMS::attributes.content.job_title',true) !!}
+                        {!! CoralsForm::select2('properties[rating]','CMS::attributes.content.rating',trans('CMS::attributes.content.rating_option'),true) !!}
                     </div>
                 </div>
                 <div class="row">
@@ -41,7 +41,7 @@
                             <img src="{{ $testimonial->image }}" class="img-responsive" style="max-width: 150px;"
                                  alt="Image"/>
                             <br/>
-                            {!! CoralsForm::checkbox('clear', 'cms::attributes.content.clear') !!}
+                            {!! CoralsForm::checkbox('clear', 'CMS::attributes.content.clear') !!}
                         @endif
                         {!! CoralsForm::file('image', 'cms::attributes.content.featured_image',false) !!}
 

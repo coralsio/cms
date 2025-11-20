@@ -70,7 +70,7 @@ class NewsTest extends TestCase
         if ($this->new) {
             $response = $this->get('cms/news/' . $this->new->hashed_id . '/edit');
 
-            $response->assertViewIs('cms::news.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::news.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }

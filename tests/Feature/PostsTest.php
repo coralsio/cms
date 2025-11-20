@@ -91,7 +91,7 @@ class PostsTest extends TestCase
         if ($this->post) {
             $response = $this->get('cms/posts/' . $this->post->hashed_id . '/edit');
 
-            $response->assertViewIs('cms::posts.create_edit')->assertStatus(200);
+            $response->assertViewIs('CMS::posts.create_edit')->assertStatus(200);
         }
         $this->assertTrue(true);
     }
