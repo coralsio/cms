@@ -21,8 +21,8 @@ class PostsController extends BaseController
 
         $this->resource_model = new Post();
 
-        $this->title = 'cms::module.post.title';
-        $this->title_singular = 'cms::module.post.title_singular';
+        $this->title = 'CMS::module.post.title';
+        $this->title_singular = 'CMS::module.post.title_singular';
 
         parent::__construct();
     }
@@ -34,7 +34,7 @@ class PostsController extends BaseController
      */
     public function index(PostRequest $request, PostsDataTable $dataTable)
     {
-        return $dataTable->render('cms::posts.index');
+        return $dataTable->render('CMS::posts.index');
     }
 
     /**
@@ -47,7 +47,7 @@ class PostsController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::posts.create_edit')->with(compact('post'));
+        return view('CMS::posts.create_edit')->with(compact('post'));
     }
 
     /**
@@ -86,7 +86,7 @@ class PostsController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $post->title])]);
 
-        return view('cms::posts.create_edit')->with(compact('post'));
+        return view('CMS::posts.create_edit')->with(compact('post'));
     }
 
     /**
@@ -138,9 +138,9 @@ class PostsController extends BaseController
                                 'published' => true,
                             ]);
                             $post->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 
@@ -154,9 +154,9 @@ class PostsController extends BaseController
                                 'published' => false,
                             ]);
                             $post->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 

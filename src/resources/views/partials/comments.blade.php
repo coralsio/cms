@@ -190,7 +190,7 @@
                         @endif
                         <a class="btn btn-primary hide-me m-0" data-toggle="collapse" href="#replyForm" role="button"
                            aria-expanded="false" aria-controls="replyForm">
-                            @lang('cms::labels.template.add_reply')
+                            @lang('CMS::labels.template.add_reply')
                             <i class="fa fa-reply" aria-hidden="true"></i>
                         </a>
                         <div class="collapse" id="replyForm">
@@ -200,25 +200,25 @@
                                   data-page_action="site_reload">
                                 <div class="form-group required-field">
                                     <input name="properties[author_name]" class="form-control custom-radius"
-                                           placeholder="@lang('cms::labels.template.your_name')"/>
+                                           placeholder="@lang('CMS::labels.template.your_name')"/>
                                 </div>
                                 <div class="form-group required-field">
 
                                     <input name="properties[author_email]" class="form-control custom-radius"
-                                           placeholder="@lang('cms::labels.template.your_email')"/>
+                                           placeholder="@lang('CMS::labels.template.your_email')"/>
                                 </div>
                                 <div class="form-group required-field">
                                 <textarea name="body" class="form-control custom-radius" cols="10" rows="2"
                                           style="height: 80px"
-                                          placeholder="@lang('cms::labels.template.add_reply_text')"></textarea>
+                                          placeholder="@lang('CMS::labels.template.add_reply_text')"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="margin: 0;padding:0 15px;">
-                                    @lang('cms::labels.template.add_reply')
+                                    @lang('CMS::labels.template.add_reply')
                                     <i class="fa fa-reply" aria-hidden="true"></i>
                                 </button>
                                 <a class="btn btn-secondary" data-toggle="collapse" href="#replyForm" role="button"
                                    aria-expanded="false" aria-controls="replyForm">
-                                    @lang('cms::labels.template.cancel')
+                                    @lang('CMS::labels.template.cancel')
                                 </a>
                             </form>
                         </div>
@@ -244,17 +244,17 @@
                     @if(!user())
                         <div class="form-group required-field">
                             <input name="properties[author_name]" class="form-control custom-radius"
-                                   placeholder="@lang('cms::labels.template.your_name')"/>
+                                   placeholder="@lang('CMS::labels.template.your_name')"/>
                         </div>
                         <div class="form-group required-field">
 
                             <input name="properties[author_email]" class="form-control custom-radius"
-                                   placeholder="@lang('cms::labels.template.your_email')"/>
+                                   placeholder="@lang('CMS::labels.template.your_email')"/>
                         </div>
                     @endif
                     <textarea name="body" class="form-control custom-radius" cols="10" rows="2"
                               style="height: 80px"
-                              placeholder="@lang('cms::labels.template.add_comments')"></textarea>
+                              placeholder="@lang('CMS::labels.template.add_comments')"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="margin: 0;padding:0 15px;">
                     @lang('CMS::labels.template.add_comment')

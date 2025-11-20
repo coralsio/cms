@@ -21,8 +21,8 @@ class CategoriesController extends BaseController
 
         $this->resource_model = new Category();
 
-        $this->title = 'cms::module.category.title';
-        $this->title_singular = 'cms::module.category.title_singular';
+        $this->title = 'CMS::module.category.title';
+        $this->title_singular = 'CMS::module.category.title_singular';
 
         parent::__construct();
     }
@@ -34,7 +34,7 @@ class CategoriesController extends BaseController
      */
     public function index(CategoryRequest $request, CategoriesDataTable $dataTable)
     {
-        return $dataTable->render('cms::categories.index');
+        return $dataTable->render('CMS::categories.index');
     }
 
     /**
@@ -47,7 +47,7 @@ class CategoriesController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::categories.create_edit')->with(compact('category'));
+        return view('CMS::categories.create_edit')->with(compact('category'));
     }
 
     /**
@@ -86,7 +86,7 @@ class CategoriesController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $category->name])]);
 
-        return view('cms::categories.create_edit')->with(compact('category'));
+        return view('CMS::categories.create_edit')->with(compact('category'));
     }
 
     /**
@@ -138,9 +138,9 @@ class CategoriesController extends BaseController
                                 'status' => 'active',
                             ]);
                             $category->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_status', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_status', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 
@@ -154,9 +154,9 @@ class CategoriesController extends BaseController
                                 'status' => 'inactive',
                             ]);
                             $category->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_status', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_status', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 

@@ -3,7 +3,7 @@
 @section('title', $blog->title)
 
 @section('content')
-    @include('cms::cms_internal.partials.page_header', ['content'=> $blog->rendered, 'item' => $blog])
+    @include('CMS::cms_internal.partials.page_header', ['content'=> $blog->rendered, 'item' => $blog])
 
     @isset($title)
         <div class="text-left">
@@ -40,14 +40,14 @@
                             @endforeach
                         </div>
                         <div class="text-right">
-                            <a href="{{ url('cms/'.$post->slug) }}">@lang('cms::labels.cms_internal.read_more')</a>
+                            <a href="{{ url('cms/'.$post->slug) }}">@lang('CMS::labels.cms_internal.read_more')</a>
                         </div>
                         <hr/>
                     </div>
                 </div><!--end post-->
             @empty
                 <div class="alert alert-warning">
-                    <h4>@lang('cms::labels.cms_internal.no_posts_found')</h4>
+                    <h4>@lang('CMS::labels.cms_internal.no_posts_found')</h4>
                 </div>
             @endforelse
             <div class="">
@@ -56,7 +56,7 @@
         </div>
         @if(in_array($blog->template,['left','right']))
             <div class="{{ $blog->template =='left'?'col-md-pull-8':'' }} col-md-4">
-                @include('cms::cms_internal.partials.blog_sidebar')
+                @include('CMS::cms_internal.partials.blog_sidebar')
             </div>
         @endif
     </div>

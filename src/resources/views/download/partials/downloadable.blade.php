@@ -20,9 +20,9 @@
                    class="table color-table info-table table table-hover table-striped table-condensed">
                 <thead>
                 <tr>
-                    <th style="width:30%;">@lang('cms::labels.download.file') <span style="color: #F44336;">*</span>
+                    <th style="width:30%;">@lang('CMS::labels.download.file') <span style="color: #F44336;">*</span>
                     </th>
-                    <th style="width:60%;">@lang('cms::labels.download.description') <span
+                    <th style="width:60%;">@lang('CMS::labels.download.description') <span
                                 style="color: #F44336;">*</span></th>
                     <th></th>
                 </tr>
@@ -52,7 +52,7 @@
         <button type="button" class="btn btn-success btn-sm" id="add-new-download">
             <i class="fa fa-plus"></i>
         </button>
-        <span class="help-block">@lang('cms::labels.download.add_download')</span>
+        <span class="help-block">@lang('CMS::labels.download.add_download')</span>
     </div>
 </div>
 

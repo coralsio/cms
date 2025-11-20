@@ -21,22 +21,22 @@
             @component('components.box')
                 <div class="row">
                     <div class="col-md-8">
-                        {!! CoralsForm::text('title','cms::attributes.content.title',true) !!}
+                        {!! CoralsForm::text('title','CMS::attributes.content.title',true) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::textarea('content','cms::attributes.content.content',true, null, ['class'=>'ckeditor']) !!}
+                        {!! CoralsForm::textarea('content','CMS::attributes.content.content',true, null, ['class'=>'ckeditor']) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::checkbox('published', 'cms::attributes.content.published',$download->published) !!}
+                        {!! CoralsForm::checkbox('published', 'CMS::attributes.content.published',$download->published) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        @include('cms::download.partials.downloadable', ['model' => $download])
+                        @include('CMS::download.partials.downloadable', ['model' => $download])
                     </div>
                 </div>
                 {!! CoralsForm::customFields($download) !!}

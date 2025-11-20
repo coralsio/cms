@@ -3,7 +3,7 @@
 @section('title', $item->title)
 
 @section('content')
-    @include('cms::cms_internal.partials.page_header')
+    @include('CMS::cms_internal.partials.page_header')
 
     <div class="row">
         <div class="{{ $blog->template != 'full'?'col-md-8':'col-md-12' }} {{ $blog->template =='left'?'col-md-offset-4':'' }}">
@@ -26,7 +26,7 @@
         </div>
         @if(in_array($blog->template,['left','right']))
             <div class="{{ 'col-md-4' }}">
-                @include('cms::cms_internal.partials.blog_sidebar')
+                @include('CMS::cms_internal.partials.blog_sidebar')
             </div>
         @endif
     </div>

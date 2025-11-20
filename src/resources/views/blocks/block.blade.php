@@ -20,5 +20,5 @@
     @endif
 @else
     <p class="text-center text-danger">
-        <strong> {!! trans('cms::labels.block.block_cannot_found',['block_key' => $block_key]) !!}</strong></p>
+        <strong> {!! trans('CMS::labels.block.block_cannot_found',['block_key' => $block_key]) !!}</strong></p>
 @endif

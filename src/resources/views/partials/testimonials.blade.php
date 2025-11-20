@@ -190,7 +190,7 @@
 @endsection
 
 <section class="reviews">
-    <h4 class="main-title text-center font-weight-bold pb-4">@lang('cms::labels.testimonial.what_customer_says')</h4>
+    <h4 class="main-title text-center font-weight-bold pb-4">@lang('CMS::labels.testimonial.what_customer_says')</h4>
     <div class="container">
         <div class="owl-carousel owl-theme">
             @foreach($testimonials = \CMS::getTestimonialsList() as $testimonial)

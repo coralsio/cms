@@ -15,8 +15,8 @@ class BlocksController extends BaseController
 
         $this->resource_model = new Block();
 
-        $this->title = 'cms::module.block.title';
-        $this->title_singular = 'cms::module.block.title_singular';
+        $this->title = 'CMS::module.block.title';
+        $this->title_singular = 'CMS::module.block.title_singular';
 
         parent::__construct();
     }
@@ -28,6 +28,6 @@ class BlocksController extends BaseController
      */
     public function index(BlockRequest $request, BlocksDataTable $dataTable)
     {
-        return $dataTable->render('cms::blocks.index');
+        return $dataTable->render('CMS::blocks.index');
     }
 }

@@ -215,9 +215,9 @@ class CMS
     public function getCategoriesBelongsTo()
     {
         $belongs_to = [
-            'page' => trans('cms::attributes.category.page'),
-            'post' => trans('cms::attributes.category.post'),
-            'faq' => trans('cms::attributes.category.faq'),
+            'page' => trans('CMS::attributes.category.page'),
+            'post' => trans('CMS::attributes.category.post'),
+            'faq' => trans('CMS::attributes.category.faq'),
         ];
 
         return $belongs_to;

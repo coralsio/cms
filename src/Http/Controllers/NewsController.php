@@ -21,8 +21,8 @@ class NewsController extends BaseController
 
         $this->resource_model = new News();
 
-        $this->title = 'cms::module.news.title';
-        $this->title_singular = 'cms::module.news.title_singular';
+        $this->title = 'CMS::module.news.title';
+        $this->title_singular = 'CMS::module.news.title_singular';
 
         parent::__construct();
     }
@@ -34,7 +34,7 @@ class NewsController extends BaseController
      */
     public function index(NewsRequest $request, NewsDataTable $dataTable)
     {
-        return $dataTable->render('cms::news.index');
+        return $dataTable->render('CMS::news.index');
     }
 
     /**
@@ -47,7 +47,7 @@ class NewsController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::news.create_edit')->with(compact('news'));
+        return view('CMS::news.create_edit')->with(compact('news'));
     }
 
     /**
@@ -86,7 +86,7 @@ class NewsController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $news->title])]);
 
-        return view('cms::news.create_edit')->with(compact('news'));
+        return view('CMS::news.create_edit')->with(compact('news'));
     }
 
     /**
@@ -137,9 +137,9 @@ class NewsController extends BaseController
                                 'published' => true,
                             ]);
                             $news->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 
@@ -153,9 +153,9 @@ class NewsController extends BaseController
                                 'published' => false,
                             ]);
                             $news->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 

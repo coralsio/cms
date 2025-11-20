@@ -20,8 +20,8 @@ class TestimonialsController extends BaseController
 
         $this->resource_model = new Testimonial();
 
-        $this->title = 'cms::module.testimonial.title';
-        $this->title_singular = 'cms::module.testimonial.title_singular';
+        $this->title = 'CMS::module.testimonial.title';
+        $this->title_singular = 'CMS::module.testimonial.title_singular';
 
         parent::__construct();
     }
@@ -33,7 +33,7 @@ class TestimonialsController extends BaseController
      */
     public function index(TestimonialRequest $request, TestimonialsDataTable $dataTable)
     {
-        return $dataTable->render('cms::testimonials.index');
+        return $dataTable->render('CMS::testimonials.index');
     }
 
     /**
@@ -46,7 +46,7 @@ class TestimonialsController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::testimonials.create_edit')->with(compact('testimonial'));
+        return view('CMS::testimonials.create_edit')->with(compact('testimonial'));
     }
 
     /**
@@ -84,7 +84,7 @@ class TestimonialsController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $testimonial->title])]);
 
-        return view('cms::testimonials.create_edit')->with(compact('testimonial'));
+        return view('CMS::testimonials.create_edit')->with(compact('testimonial'));
     }
 
     /**

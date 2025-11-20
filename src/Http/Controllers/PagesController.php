@@ -21,8 +21,8 @@ class PagesController extends BaseController
 
         $this->resource_model = new Page();
 
-        $this->title = 'cms::module.page.title';
-        $this->title_singular = 'cms::module.page.title_singular';
+        $this->title = 'CMS::module.page.title';
+        $this->title_singular = 'CMS::module.page.title_singular';
 
         parent::__construct();
     }
@@ -34,7 +34,7 @@ class PagesController extends BaseController
      */
     public function index(PageRequest $request, PagesDataTable $dataTable)
     {
-        return $dataTable->render('cms::pages.index');
+        return $dataTable->render('CMS::pages.index');
     }
 
     /**
@@ -47,7 +47,7 @@ class PagesController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::pages.create_edit')->with(compact('page'));
+        return view('CMS::pages.create_edit')->with(compact('page'));
     }
 
     /**
@@ -89,7 +89,7 @@ class PagesController extends BaseController
             // Get the theme
             $theme = \Theme::find(\Theme::get());
 
-            return view('cms::designer.designer')->with(compact('page', 'theme'));
+            return view('CMS::designer.designer')->with(compact('page', 'theme'));
         } catch (\Exception $exception) {
             abort(404);
         }
@@ -124,7 +124,7 @@ class PagesController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $page->title])]);
 
-        return view('cms::pages.create_edit')->with(compact('page'));
+        return view('CMS::pages.create_edit')->with(compact('page'));
     }
 
     /**
@@ -176,9 +176,9 @@ class PagesController extends BaseController
                                 'published' => true,
                             ]);
                             $page->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 
@@ -192,9 +192,9 @@ class PagesController extends BaseController
                                 'published' => false,
                             ]);
                             $page->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 

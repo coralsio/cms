@@ -10,7 +10,7 @@ return [
                 'edit_in_designer' => [
                     'icon' => 'fa fa-paint-brush fa-fw',
                     'href_pattern' => ['pattern' => '[arg]/design', 'replace' => ['return $object->getShowUrl();']],
-                    'label_pattern' => ['pattern' => '[arg]', 'replace' => ["return trans('cms::labels.page.edit_designer');"]],
+                    'label_pattern' => ['pattern' => '[arg]', 'replace' => ["return trans('CMS::labels.page.edit_designer');"]],
                     'target' => '_blank',
                     'data' => [],
                 ],
@@ -40,7 +40,7 @@ return [
                 'widget' => [
                     'icon' => 'fa fa-fw fa-th',
                     'href_pattern' => ['pattern' => '[arg]/widgets', 'replace' => ['return $object->getShowUrl();']],
-                    'label_pattern' => ['pattern' => '[arg]', 'replace' => ["return trans('cms::module.widget.title');"]],
+                    'label_pattern' => ['pattern' => '[arg]', 'replace' => ["return trans('CMS::module.widget.title');"]],
                     'data' => [],
                 ],
                 'edit' => [],

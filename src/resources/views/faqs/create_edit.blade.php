@@ -21,25 +21,25 @@
             @component('components.box')
                 <div class="row">
                     <div class="col-md-8">
-                        {!! CoralsForm::text('title','cms::attributes.content.question',true) !!}
+                        {!! CoralsForm::text('title','CMS::attributes.content.question',true) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::textarea('content','cms::attributes.content.answer',true, null, ['class'=>'ckeditor']) !!}
+                        {!! CoralsForm::textarea('content','CMS::attributes.content.answer',true, null, ['class'=>'ckeditor']) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        {!! CoralsForm::select('categories[]','cms::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'faq'),true,$faq->categories->pluck('id')->toArray(),['multiple'=>true], 'select2') !!}
+                        {!! CoralsForm::select('categories[]','CMS::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'faq'),true,$faq->categories->pluck('id')->toArray(),['multiple'=>true], 'select2') !!}
                     </div>
                     <div class="col-md-6">
-                        {!! CoralsForm::select('tags[]','cms::attributes.content.tags', \CMS::getTagsList(),false,null,['class'=>'tags','multiple'=>true], 'select2') !!}
+                        {!! CoralsForm::select('tags[]','CMS::attributes.content.tags', \CMS::getTagsList(),false,null,['class'=>'tags','multiple'=>true], 'select2') !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::checkbox('published', 'cms::attributes.content.published',$faq->published) !!}
+                        {!! CoralsForm::checkbox('published', 'CMS::attributes.content.published',$faq->published) !!}
                     </div>
                 </div>
                 {!! CoralsForm::customFields($faq) !!}

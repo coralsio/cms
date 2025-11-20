@@ -21,7 +21,7 @@ class FeedController
             $feed['title'],
             request()->url(),
             $feed['items'],
-            $feed['view'] ?? 'cms::feed.feed',
+            $feed['view'] ?? 'CMS::feed.feed',
             $feed['description'] ?? '',
             $feed['language'] ?? ''
         );

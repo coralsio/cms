@@ -17,8 +17,8 @@ class WidgetsController extends BaseController
             config('cms.models.widget.resource_route'),
             ['block' => request()->route('block') ?: '_']
         );
-        $this->title = 'cms::module.widget.title';
-        $this->title_singular = 'cms::module.widget.title_singular';
+        $this->title = 'CMS::module.widget.title';
+        $this->title_singular = 'CMS::module.widget.title_singular';
 
         parent::__construct();
     }
@@ -30,9 +30,9 @@ class WidgetsController extends BaseController
      */
     public function index(widgetRequest $request, Block $block, WidgetsDataTable $dataTable)
     {
-        $this->setViewSharedData(['title' => trans('cms::labels.widget.index_title', ['block' => $block->name , 'widget' => $this->title])]);
+        $this->setViewSharedData(['title' => trans('CMS::labels.widget.index_title', ['block' => $block->name , 'widget' => $this->title])]);
 
-        return $dataTable->setResourceUrl($this->resource_url)->render('cms::widgets.index', compact('block'));
+        return $dataTable->setResourceUrl($this->resource_url)->render('CMS::widgets.index', compact('block'));
     }
 
     /**
@@ -47,7 +47,7 @@ class WidgetsController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::widgets.create_edit')->with(compact('widget', 'block'));
+        return view('CMS::widgets.create_edit')->with(compact('widget', 'block'));
     }
 
     /**
@@ -78,7 +78,7 @@ class WidgetsController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $widget->title])]);
 
-        return view('cms::widgets.create_edit')->with(compact('widget', 'block'));
+        return view('CMS::widgets.create_edit')->with(compact('widget', 'block'));
     }
 
     /**
@@ -135,11 +135,11 @@ class WidgetsController extends BaseController
                     $count++;
                 }
             }
-            $response = [['message' => trans('cms::messages.widget.widget_record_success'), 'level' => 'success']];
+            $response = [['message' => trans('CMS::messages.widget.widget_record_success'), 'level' => 'success']];
 
             return response()->json($response);
         } else {
-            $response = [['message' => trans('cms::messages.widget.no_change'), 'level' => 'info']];
+            $response = [['message' => trans('CMS::messages.widget.no_change'), 'level' => 'info']];
 
             return response()->json($response);
         }

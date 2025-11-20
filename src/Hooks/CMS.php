@@ -19,7 +19,7 @@ class CMS
     public function dashboard_content1($dashboard_content)
     {
         if (user()->hasPermissionTo('Administrations::admin.cms')) {
-            $dashboard_content .= view('cms::partials.dashboard1')->render();
+            $dashboard_content .= view('CMS::partials.dashboard1')->render();
         }
 
         return $dashboard_content;
@@ -33,7 +33,7 @@ class CMS
     public function dashboard_content2($dashboard_content)
     {
         if (user()->hasPermissionTo('Administrations::admin.cms')) {
-            $dashboard_content .= view('cms::partials.dashboard2')->render();
+            $dashboard_content .= view('CMS::partials.dashboard2')->render();
         }
 
         return $dashboard_content;

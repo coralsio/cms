@@ -69,8 +69,8 @@ class PostsDataTable extends BaseDataTable
     {
         return [
             'delete' => ['title' => trans('Corals::labels.delete'), 'permission' => 'CMS::post.delete', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('cms::attributes.content.published'), 'permission' => 'CMS::post.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
-            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .trans('cms::attributes.content.draft'), 'permission' => 'CMS::post.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'published' => ['title' => '<i class="fa fa-check-circle"></i> ' .trans('CMS::attributes.content.published'), 'permission' => 'CMS::post.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
+            'draft' => ['title' => '<i class="fa fa-check-circle-o"></i> ' .trans('CMS::attributes.content.draft'), 'permission' => 'CMS::post.update', 'confirmation' => trans('Corals::labels.confirmation.title')],
         ];
     }
 

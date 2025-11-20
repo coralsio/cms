@@ -21,55 +21,55 @@
                 {!! CoralsForm::openForm($page, ['files'=>true]) !!}
                 <div class="row">
                     <div class="col-md-4">
-                        {!! CoralsForm::text('title','cms::attributes.content.title',true) !!}
+                        {!! CoralsForm::text('title','CMS::attributes.content.title',true) !!}
                     </div>
                     <div class="col-md-4">
-                        {!! CoralsForm::text('slug','cms::attributes.content.slug',true) !!}
+                        {!! CoralsForm::text('slug','CMS::attributes.content.slug',true) !!}
                     </div>
                     <div class="col-md-4">
-                        {!! CoralsForm::select('categories[]','cms::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'page'), false,$page->categories->pluck('id')->toArray(),['multiple'=>true], 'select2') !!}
+                        {!! CoralsForm::select('categories[]','CMS::attributes.content.categories', \CMS::getCategoriesList(false, null, null, 'page'), false,$page->categories->pluck('id')->toArray(),['multiple'=>true], 'select2') !!}
                     </div>
                 </div>
                 @if($page->exists)
                     <div class="row">
                         <div class="col-md-2">
                             <div class="m-b-10">
-                                {!! CoralsForm::link(url($resource_url.'/'.$page->hashed_id.'/design'), 'cms::labels.page.edit_in_designer',['target'=>'_blank', 'class'=>'btn btn-primary']) !!}
+                                {!! CoralsForm::link(url($resource_url.'/'.$page->hashed_id.'/design'), 'CMS::labels.page.edit_in_designer',['target'=>'_blank', 'class'=>'btn btn-primary']) !!}
                             </div>
                         </div>
                     </div>
                 @endif
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::textarea('content','cms::attributes.content.content',false, null, ['class'=>'ckeditor']) !!}
+                        {!! CoralsForm::textarea('content','CMS::attributes.content.content',false, null, ['class'=>'ckeditor']) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        {!! CoralsForm::textarea('meta_keywords','cms::attributes.content.meta_keywords',false,$page->meta_keywords,['rows'=>4]) !!}
+                        {!! CoralsForm::textarea('meta_keywords','CMS::attributes.content.meta_keywords',false,$page->meta_keywords,['rows'=>4]) !!}
                     </div>
                     <div class="col-md-6">
-                        {!! CoralsForm::textarea('meta_description','cms::attributes.content.meta_description',false,$page->meta_description,['rows'=>4]) !!}
+                        {!! CoralsForm::textarea('meta_description','CMS::attributes.content.meta_description',false,$page->meta_description,['rows'=>4]) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-4">
-                                {!! CoralsForm::checkbox('published', 'cms::attributes.content.published',$page->published) !!}
+                                {!! CoralsForm::checkbox('published', 'CMS::attributes.content.published',$page->published) !!}
                             </div>
                             <div class="col-md-4">
-                                {!! CoralsForm::checkbox('private', 'cms::attributes.content.private',$page->private, 1,
-                                ['help_text'=>'cms::attributes.content.private_help']) !!}
+                                {!! CoralsForm::checkbox('private', 'CMS::attributes.content.private',$page->private, 1,
+                                ['help_text'=>'CMS::attributes.content.private_help']) !!}
                             </div>
                             <div class="col-md-4">
-                                {!! CoralsForm::checkbox('internal', 'cms::attributes.content.internal', $page->internal, 1,
-                                ['help_text'=>'cms::attributes.content.internal_help']) !!}
+                                {!! CoralsForm::checkbox('internal', 'CMS::attributes.content.internal', $page->internal, 1,
+                                ['help_text'=>'CMS::attributes.content.internal_help']) !!}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                {!! CoralsForm::select2('template','cms::attributes.content.template', \CMS::getFrontendThemeTemplates()) !!}
+                                {!! CoralsForm::select2('template','CMS::attributes.content.template', \CMS::getFrontendThemeTemplates()) !!}
                             </div>
                         </div>
                     </div>
@@ -78,13 +78,13 @@
                             <img src="{{ $page->featured_image }}" class="img-responsive" style="max-width: 100%;"
                                  alt="Featured Image"/>
                             <br/>
-                            {!! CoralsForm::checkbox('clear', 'cms::attributes.content.clear') !!}
+                            {!! CoralsForm::checkbox('clear', 'CMS::attributes.content.clear') !!}
                         @endif
-                        {!! CoralsForm::file('featured_image', 'cms::attributes.content.featured_image') !!}
+                        {!! CoralsForm::file('featured_image', 'CMS::attributes.content.featured_image') !!}
                         -- OR --
                         <br/>
                         <br/>
-                        {!! CoralsForm::text('featured_image_link','cms::attributes.content.featured_image_link') !!}
+                        {!! CoralsForm::text('featured_image_link','CMS::attributes.content.featured_image_link') !!}
                     </div>
                 </div>
                 {!! CoralsForm::customFields($page) !!}
@@ -97,15 +97,15 @@
                 <hr/>
                 <div class="row">
                     <div class="col-md-5">
-                        <small>@lang('cms::labels.page.designer_powered')</small>
+                        <small>@lang('CMS::labels.page.designer_powered')</small>
                         <h4><img src="{{ asset('assets/corals/plugins/page-designer/grapesjs-logo.png') }}"
                                  height="20"
-                                 alt="GrapesJS Logo"/> @lang('cms::labels.page.grapes_js') </h4>
+                                 alt="GrapesJS Logo"/> @lang('CMS::labels.page.grapes_js') </h4>
                         <blockquote>
-                            @lang('cms::labels.page.paragraph_grapes')
+                            @lang('CMS::labels.page.paragraph_grapes')
                         </blockquote>
                         <div class="help-text text-muted">
-                            @lang('cms::labels.page.for_demo_and_docs')
+                            @lang('CMS::labels.page.for_demo_and_docs')
                             <a href="http://grapesjs.com/" target="_blank">http://grapesjs.com/</a>
                         </div>
                         <br/>

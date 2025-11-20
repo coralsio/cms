@@ -21,8 +21,8 @@ class FaqsController extends BaseController
 
         $this->resource_model = new Faq();
 
-        $this->title = 'cms::module.faq.title';
-        $this->title_singular = 'cms::module.faq.title_singular';
+        $this->title = 'CMS::module.faq.title';
+        $this->title_singular = 'CMS::module.faq.title_singular';
 
         parent::__construct();
     }
@@ -34,7 +34,7 @@ class FaqsController extends BaseController
      */
     public function index(FaqRequest $request, FaqsDataTable $dataTable)
     {
-        return $dataTable->render('cms::faqs.index');
+        return $dataTable->render('CMS::faqs.index');
     }
 
     /**
@@ -47,7 +47,7 @@ class FaqsController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::faqs.create_edit')->with(compact('faq'));
+        return view('CMS::faqs.create_edit')->with(compact('faq'));
     }
 
     /**
@@ -86,7 +86,7 @@ class FaqsController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $faq->title])]);
 
-        return view('cms::faqs.create_edit')->with(compact('faq'));
+        return view('CMS::faqs.create_edit')->with(compact('faq'));
     }
 
     /**
@@ -138,9 +138,9 @@ class FaqsController extends BaseController
                                 'published' => true,
                             ]);
                             $faq->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 
@@ -154,9 +154,9 @@ class FaqsController extends BaseController
                                 'published' => false,
                             ]);
                             $faq->save();
-                            $message = ['level' => 'success', 'message' => trans('cms::messages.update_published', ['item' => $this->title_singular])];
+                            $message = ['level' => 'success', 'message' => trans('CMS::messages.update_published', ['item' => $this->title_singular])];
                         } else {
-                            $message = ['level' => 'error', 'message' => trans('cms::messages.no_permission', ['item' => $this->title_singular])];
+                            $message = ['level' => 'error', 'message' => trans('CMS::messages.no_permission', ['item' => $this->title_singular])];
                         }
                     }
 

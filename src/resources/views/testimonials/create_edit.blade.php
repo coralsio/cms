@@ -43,13 +43,13 @@
                             <br/>
                             {!! CoralsForm::checkbox('clear', 'CMS::attributes.content.clear') !!}
                         @endif
-                        {!! CoralsForm::file('image', 'cms::attributes.content.featured_image',false) !!}
+                        {!! CoralsForm::file('image', 'CMS::attributes.content.featured_image',false) !!}
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::checkbox('published', 'cms::attributes.content.published',$testimonial->published) !!}
+                        {!! CoralsForm::checkbox('published', 'CMS::attributes.content.published',$testimonial->published) !!}
                     </div>
                 </div>
                 {!! CoralsForm::customFields($testimonial) !!}

@@ -21,14 +21,14 @@
             @component('components.box')
                 {!! CoralsForm::openForm($category) !!}
 
-                {!! CoralsForm::text('name','cms::attributes.category.name',true) !!}
-                {!! CoralsForm::text('slug','cms::attributes.category.slug',true) !!}
-                {!! CoralsForm::select2('belongs_to','cms::attributes.category.belongs_to', \CMS::getCategoriesBelongsTo(), true) !!}
+                {!! CoralsForm::text('name','CMS::attributes.category.name',true) !!}
+                {!! CoralsForm::text('slug','CMS::attributes.category.slug',true) !!}
+                {!! CoralsForm::select2('belongs_to','CMS::attributes.category.belongs_to', \CMS::getCategoriesBelongsTo(), true) !!}
 
                 {!! CoralsForm::radio('status','Corals::attributes.status',true, trans('Corals::attributes.status_options')) !!}
 
                 @if (\Modules::isModuleActive('corals-subscriptions'))
-                    {!! CoralsForm::select('subscription_plans[]','cms::attributes.category.access_plans', [], false, null,
+                    {!! CoralsForm::select('subscription_plans[]','CMS::attributes.category.access_plans', [], false, null,
                     ['class'=>'select2-ajax','multiple'=>"multiple",'data'=>[
                     'model'=>\Corals\Modules\Subscriptions\Models\Plan::class,
                     'columns'=> json_encode(['name']),

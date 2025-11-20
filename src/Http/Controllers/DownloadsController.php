@@ -22,8 +22,8 @@ class DownloadsController extends BaseController
 
         $this->resource_model = new Download();
 
-        $this->title = 'cms::module.download.title';
-        $this->title_singular = 'cms::module.download.title_singular';
+        $this->title = 'CMS::module.download.title';
+        $this->title_singular = 'CMS::module.download.title_singular';
 
         $this->corals_middleware_except = array_merge($this->corals_middleware_except, ['downloadFile']);
 
@@ -37,7 +37,7 @@ class DownloadsController extends BaseController
      */
     public function index(DownloadRequest $request, DownloadsDataTable $dataTable)
     {
-        return $dataTable->render('cms::download.index');
+        return $dataTable->render('CMS::download.index');
     }
 
     /**
@@ -50,7 +50,7 @@ class DownloadsController extends BaseController
 
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.create_title', ['title' => $this->title_singular])]);
 
-        return view('cms::download.create_edit')->with(compact('download'));
+        return view('CMS::download.create_edit')->with(compact('download'));
     }
 
     /**
@@ -89,7 +89,7 @@ class DownloadsController extends BaseController
     {
         $this->setViewSharedData(['title_singular' => trans('Corals::labels.update_title', ['title' => $download->title])]);
 
-        return view('cms::download.create_edit')->with(compact('download'));
+        return view('CMS::download.create_edit')->with(compact('download'));
     }
 
     /**

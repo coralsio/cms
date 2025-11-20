@@ -201,7 +201,7 @@ trait CMSControllerFunctions
         $title = null;
 
         if ($request->has('query')) {
-            $title = $this->formatTitle(strip_tags($request->get('query')), trans('cms::labels.cms.search_results_for'));
+            $title = $this->formatTitle(strip_tags($request->get('query')), trans('CMS::labels.cms.search_results_for'));
         }
 
         $view = $this->view_prefix . '/blog';
@@ -469,7 +469,7 @@ trait CMSControllerFunctions
      */
     private function formatTitle($title, $prefix = '')
     {
-        return $formattedTitle = trans('cms::labels.cms.blog_formatted_title', ['prefix' => $prefix, 'title' => $title]);
+        return $formattedTitle = trans('CMS::labels.cms.blog_formatted_title', ['prefix' => $prefix, 'title' => $title]);
     }
 
     /**
@@ -538,6 +538,6 @@ trait CMSControllerFunctions
             }
         );
 
-        return \Response::json(['message' => trans('cms::labels.message.email_sent_success'), 'class' => 'alert-success', 'level' => 'success']);
+        return \Response::json(['message' => trans('CMS::labels.message.email_sent_success'), 'class' => 'alert-success', 'level' => 'success']);
     }
 }

@@ -20,30 +20,30 @@
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" required="required"
-                                   placeholder="@lang('cms::labels.cms_internal.contact_form.email')">
+                                   placeholder="@lang('CMS::labels.cms_internal.contact_form.email')">
                         </div>
                         <div class="form-group">
                             <input type="text" name="phone" class="form-control"
-                                   placeholder="@lang('cms::labels.cms_internal.contact_form.phone')">
+                                   placeholder="@lang('CMS::labels.cms_internal.contact_form.phone')">
                         </div>
                         <div class="form-group">
                             <input type="text" name="company" class="form-control"
-                                   placeholder="@lang('cms::labels.cms_internal.contact_form.company')">
+                                   placeholder="@lang('CMS::labels.cms_internal.contact_form.company')">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <input type="text" name="subject" class="form-control" required="required"
-                                   placeholder="@lang('cms::labels.cms_internal.contact_form.subject')">
+                                   placeholder="@lang('CMS::labels.cms_internal.contact_form.subject')">
                         </div>
                         <div class="form-group">
                                 <textarea name="message" id="message" required="required" class="form-control"
                                           rows="6"
-                                          placeholder="@lang('cms::labels.cms_internal.contact_form.message')"></textarea>
+                                          placeholder="@lang('CMS::labels.cms_internal.contact_form.message')"></textarea>
                         </div>
                         <div class="form-group text-right">
                             <button type="submit" name="submit" class="btn btn-primary btn-rounded">
-                                @lang('cms::labels.cms_internal.contact_form.submit')
+                                @lang('CMS::labels.cms_internal.contact_form.submit')
                             </button>
                         </div>
                     </div>

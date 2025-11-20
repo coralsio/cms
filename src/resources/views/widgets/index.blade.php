@@ -15,7 +15,7 @@
         <div class="col-md-12">
             @component('components.box')
                 <div class="text-info">
-                    <i class="fa fa-info-circle"></i> @lang('cms::labels.widget.can_drop_table_row')
+                    <i class="fa fa-info-circle"></i> @lang('CMS::labels.widget.can_drop_table_row')
 
                 </div>
             @endcomponent

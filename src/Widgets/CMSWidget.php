@@ -27,7 +27,7 @@ class CMSWidget
             <span class="info-box-icon "><i class="fa fa-files-o fa-fw"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">' . trans('cms::labels.cms_widget.page') . '</span>
+              <span class="info-box-text">' . trans('CMS::labels.cms_widget.page') . '</span>
               <span class="info-box-number">' . $pages . '</span>
             </div>
             <!-- /.info-box-content -->
@@ -41,7 +41,7 @@ class CMSWidget
             <span class="info-box-icon "><i class="fa fa-thumb-tack fa-fw"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">' . trans('cms::labels.cms_widget.post') . '</span>
+              <span class="info-box-text">' . trans('CMS::labels.cms_widget.post') . '</span>
               <span class="info-box-number">' . $posts . '</span>
             </div>
             <!-- /.info-box-content -->
@@ -55,7 +55,7 @@ class CMSWidget
             <span class="info-box-icon "><i class="fa fa fa-newspaper-o fa-fw"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">' . trans('cms::labels.cms_widget.new') . '</span>
+              <span class="info-box-text">' . trans('CMS::labels.cms_widget.new') . '</span>
               <span class="info-box-number">' . $news . '</span>
             </div>
             <!-- /.info-box-content -->
@@ -70,7 +70,7 @@ class CMSWidget
             <span class="info-box-icon "><i class="fa fa-folder-open fa-fw"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">' . trans('cms::labels.cms_widget.category') . '</span>
+              <span class="info-box-text">' . trans('CMS::labels.cms_widget.category') . '</span>
               <span class="info-box-number">' . $categories . '</span>
             </div>
             <!-- /.info-box-content -->

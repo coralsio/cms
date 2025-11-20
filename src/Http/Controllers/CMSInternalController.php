@@ -13,7 +13,7 @@ class CMSInternalController extends BaseController
 
     public function __construct()
     {
-        $this->view_prefix = 'cms::cms_internal';
+        $this->view_prefix = 'CMS::cms_internal';
 
         $this->resetContentQuery();
 

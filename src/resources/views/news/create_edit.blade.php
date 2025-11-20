@@ -21,23 +21,23 @@
             @component('components.box')
                 <div class="row">
                     <div class="col-md-4">
-                        {!! CoralsForm::text('title','cms::attributes.content.title',true) !!}
+                        {!! CoralsForm::text('title','CMS::attributes.content.title',true) !!}
                     </div>
                     <div class="col-md-4">
-                        {!! CoralsForm::text('slug','cms::attributes.content.slug',true) !!}
+                        {!! CoralsForm::text('slug','CMS::attributes.content.slug',true) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {!! CoralsForm::textarea('content','cms::attributes.content.content',true, null, ['class'=>'ckeditor']) !!}
+                        {!! CoralsForm::textarea('content','CMS::attributes.content.content',true, null, ['class'=>'ckeditor']) !!}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        {!! CoralsForm::textarea('meta_keywords','cms::attributes.content.meta_keywords',false,$news->meta_keywords,['rows'=>4]) !!}
+                        {!! CoralsForm::textarea('meta_keywords','CMS::attributes.content.meta_keywords',false,$news->meta_keywords,['rows'=>4]) !!}
                     </div>
                     <div class="col-md-6">
-                        {!! CoralsForm::textarea('meta_description','cms::attributes.content.meta_description',false,$news->meta_description,['rows'=>4]) !!}
+                        {!! CoralsForm::textarea('meta_description','CMS::attributes.content.meta_description',false,$news->meta_description,['rows'=>4]) !!}
                     </div>
                 </div>
                 <div class="row">
@@ -49,31 +49,31 @@
                                          style="max-width: 100%;"
                                          alt="Featured Image"/>
                                     <br/>
-                                    {!! CoralsForm::checkbox('clear', 'cms::attributes.content.clear') !!}
+                                    {!! CoralsForm::checkbox('clear', 'CMS::attributes.content.clear') !!}
                                 @endif
-                                {!! CoralsForm::file('featured_image', 'cms::attributes.content.featured_image') !!}
+                                {!! CoralsForm::file('featured_image', 'CMS::attributes.content.featured_image') !!}
                                 -- OR --
                                 <br/>
                                 <br/>
-                                {!! CoralsForm::text('featured_image_link','cms::attributes.content.featured_image_link') !!}
+                                {!! CoralsForm::text('featured_image_link','CMS::attributes.content.featured_image_link') !!}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                {!! CoralsForm::checkbox('published', 'cms::attributes.content.published',$news->published) !!}
+                                {!! CoralsForm::checkbox('published', 'CMS::attributes.content.published',$news->published) !!}
                             </div>
                             <div class="col-md-4">
-                                {!! CoralsForm::checkbox('private', 'cms::attributes.content.private',$news->private, 1,
-                                ['help_text'=>'cms::attributes.content.private_help']) !!}
+                                {!! CoralsForm::checkbox('private', 'CMS::attributes.content.private',$news->private, 1,
+                                ['help_text'=>'CMS::attributes.content.private_help']) !!}
                             </div>
                             <div class="col-md-4">
-                                {!! CoralsForm::checkbox('internal', 'cms::attributes.content.internal', $news->internal, 1,
-                                ['help_text'=>'cms::attributes.content.internal_help']) !!}
+                                {!! CoralsForm::checkbox('internal', 'CMS::attributes.content.internal', $news->internal, 1,
+                                ['help_text'=>'CMS::attributes.content.internal_help']) !!}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                {!! CoralsForm::select2('template','cms::attributes.content.template', \CMS::getFrontendThemeTemplates() ) !!}
+                                {!! CoralsForm::select2('template','CMS::attributes.content.template', \CMS::getFrontendThemeTemplates() ) !!}
                             </div>
                         </div>
                     </div>
